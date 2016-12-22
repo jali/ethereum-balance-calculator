@@ -1,0 +1,15 @@
+{
+  "name": "node-jade-async-await",
+  "version": "0.0.1",
+  "description": "basic express and jade examples with async/await",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jalal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "jade": "^1.11.0"
+  }
+}
