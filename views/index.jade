@@ -4,7 +4,12 @@ block content
 
 	h1 #{pageTitle}
 
-	p This is a simple example of Express with Jade template engine.
+	p Ethereum Balance from third party API.
+
+	form(action="/", method="post")
+		label(for="addressInput") Address: 
+		input(name="address" type="text" placeholder="Address" required autofocus)
+		button(type="submit", onsubmit="submit();")  Submit
 
 	p 
-		small Express v 4.14.0 & Jade v 1.11.0
+		small Please enter Address to calculate Ether balance
