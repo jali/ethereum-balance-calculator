@@ -10,7 +10,6 @@ var calculate = (a) => { return a/=Math.pow(10, 18) }
 
 //configuration
 app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'jade');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
