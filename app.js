@@ -35,8 +35,7 @@ app.post('/', function(req, res){
 	getEthereumAsync()
 		.then(d => res.send(`<p>Ethereum address: ${postedData.address}</p>
 		Ethereum balance calculated: ${calculate(d.balance)}`))
-		// .then(d => console.log(calculate(d.balance)))
-		.catch(reason => console.log(reason));
+		.catch(reason => res.send(`<p> ${reason.response.data.error} </p>`));
 });
 
 // run server
