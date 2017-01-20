@@ -20,7 +20,7 @@ app.get('/', function (req, res){
 	});
 });
 
-app.post('/', function(req, res){
+app.post('/result', function(req, res){
 	let postedData = req.body;
 	
 	// call api
@@ -33,9 +33,12 @@ app.post('/', function(req, res){
 		});
 
 	getEthereumAsync()
-		.then(d => res.send(`<p>Ethereum address: ${postedData.address}</p>
-		Ethereum balance calculated: ${calculate(d.balance)}`))
-		.catch(reason => res.send(`<p> ${reason.response.data.error} </p>`));
+		.then(d => res.render('result', {
+			pageTitle: `Ethereum balance calculated in Ether: ${calculate(d.balance)}`
+		}))
+		.catch(reason => res.render('result', {
+			error: reason.response.data.error
+		}));
 });
 
 // run server
