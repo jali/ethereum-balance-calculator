@@ -17,7 +17,7 @@ Run app:
 	$ node app.js
 
 
-then go to localhost:8080
+then go to localhost:3000
 
 
 This app depends on node and es6 capabilities without the use of babel modules.
