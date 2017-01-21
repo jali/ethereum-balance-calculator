@@ -4,12 +4,13 @@ block content
 
 	h1 #{pageTitle}
 
-	p Ethereum Balance from third party API.
+	p Ethereum balance from third party API.
 
 	form(action="/result", method="post")
 		label(for="addressInput") Address: 
 		input(name="address" type="text" placeholder="Address" required autofocus)
 		button(type="submit", onsubmit="submit();")  Submit
 
-	p 
-		small Please enter Address to calculate Ether balance
+	p Please enter address to calculate Ether balance
+
+	small Example address: 738d145faabb1e00cf5a017588a9c0f998318012

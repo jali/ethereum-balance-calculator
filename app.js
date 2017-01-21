@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function (req, res){
 	res.render('index', {
-		pageTitle:'ES6 NodeJS app that uses async/await!',
+		pageTitle:'ES6 NodeJS App that uses Async/Await!',
 	});
 });
 
