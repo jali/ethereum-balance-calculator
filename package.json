@@ -1,7 +1,7 @@
 {
-  "name": "node-jade-async-await",
+  "name": "ethereum-balance-calculator",
   "version": "0.0.1",
-  "description": "basic express and jade examples with async/await",
+  "description": "nodejs app for calculating ethereum balance",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,10 +9,8 @@
   "author": "jalal",
   "license": "ISC",
   "dependencies": {
-    "asyncawait": "^1.0.6",
-    "axios": "^0.21.0",
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "jade": "^1.11.0"
+    "axios": "^0.24.0",
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
   }
 }

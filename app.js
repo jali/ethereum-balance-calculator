@@ -1,8 +1,5 @@
 const express = require('express'),
-	async = require('asyncawait/async'),
-	await = require('asyncawait/await'),
-	axios = require('axios'),
-	bodyParser = require('body-parser');
+	axios = require('axios');
 
 const app = express();
 
@@ -10,13 +7,13 @@ var calculate = (a) => { return a/=Math.pow(10, 18) }
 
 //configuration
 app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.set('view engine', 'pug');
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.get('/', function (req, res){
 	res.render('index', {
-		pageTitle:'ES6 NodeJS App that uses Async/Await!',
+		pageTitle:'Node app for calculating ethereum balance!',
 	});
 });
 
@@ -26,11 +23,11 @@ app.post('/result', function(req, res){
 	// call api
 	let url = `https://api.blockcypher.com/v1/eth/main/addrs/${postedData.address}/balance`
 
-	const getEthereumAsync = async ( () => {
+	const getEthereumAsync = async () => {
 	    let result = await (axios(url))
 	    let d = await (result.data);
 	    return d;
-		});
+		};
 
 	getEthereumAsync()
 		.then(d => res.render('result', {
